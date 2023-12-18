@@ -2,11 +2,28 @@
   "name": "instaclone_project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "div": ""
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev --preview-feature"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/load-files": "^7.0.0",
+    "@graphql-tools/merge": "^9.0.1",
+    "@graphql-tools/schema": "^10.0.2",
+    "@prisma/client": "^5.7.0",
+    "apollo-server": "^3.13.0",
+    "dotenv": "^16.3.1",
+    "graphql": "^16.8.1",
+    "graphql-tools": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.6",
+    "nodemon": "^3.0.2",
+    "prisma": "^5.7.0"
+  }
 }
