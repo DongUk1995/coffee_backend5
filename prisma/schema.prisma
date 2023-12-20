@@ -10,11 +10,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Movie {
+model User {
   id Int @id @default(autoincrement())
-  title String
-  year Int
-  genre String? //필수가 아니다
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  username String
+  email String @unique
+  name String? //필수가 아니다
+  location String?
+  password String
+  avatarURL String?
+  githubUsername String?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
 }
