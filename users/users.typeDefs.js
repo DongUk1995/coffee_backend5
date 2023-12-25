@@ -5,14 +5,19 @@ export default gql`
     id: String!
     username: String!
     email: String!
-    name: String!
+    name: String
     location: String
     avatarURL: String
+    following: [User]
+    followers: [User]
+    totalFollowing: Int!
+    totalFollowers: Int!
     githubUsername: String
+    isMe: Boolean!
+    isFollowing: Boolean!
     createdAt: String
     updatedAt: String
   }
-  type Query {
-    seeUser(id: Int!): User
-  }
 `;
+
+//isFollowing: Boolean!

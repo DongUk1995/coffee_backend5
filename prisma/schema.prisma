@@ -18,6 +18,8 @@ model User {
   location  String?
   password  String
   avatarURL String?
+  followers User[] @relation("FollowRelation")
+  following User[] @relation("FollowRelation")
   githubUsername String?
 
 
